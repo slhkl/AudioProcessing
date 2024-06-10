@@ -1,14 +1,12 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
 import tensorflow as tf
+from jiwer import wer
+from skopt import gp_minimize
+from skopt.space import Real, Integer
+from skopt.utils import use_named_args
 from tensorflow import keras
 from tensorflow.keras import layers
-from jiwer import wer
-
-from skopt import gp_minimize
-from skopt.space import Real, Categorical, Integer
-from skopt.utils import use_named_args
-
 
 wavs_path = "datasets/LJSpeech-1.1/wavs/"
 metadata_path = "datasets/LJSpeech-1.1/metadata.csv"
