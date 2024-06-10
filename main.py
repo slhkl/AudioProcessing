@@ -229,13 +229,13 @@ learning_rates = Real(low=1e-4, high=1e-1, prior='log-uniform', name="learning_r
 numbers_of_filters_conv_1 = Integer(low=16, high=256, name="number_of_filters_conv_1")
 numbers_of_filters_conv_2 = Integer(low=16, high=256, name="number_of_filters_conv_2")
 numbers_of_units_lstm_1 = Integer(low=16, high=256, name="number_of_units_lstm_1")
-number_of_units_gru_1 = Integer(low=16, high=256, name="number_of_units_gru_1")
-number_of_units_gru_2 = Integer(low=16, high=256, name="number_of_units_gru_2")
+numbers_of_units_gru_1 = Integer(low=16, high=256, name="number_of_units_gru_1")
+numbers_of_units_gru_2 = Integer(low=16, high=256, name="number_of_units_gru_2")
 epochs = Integer(low=5, high=100, name="epoch")
 
 param_grid = [learning_rates, numbers_of_filters_conv_1,
               numbers_of_filters_conv_2, numbers_of_units_lstm_1,
-              number_of_units_gru_1, number_of_units_gru_2, epochs]
+              numbers_of_units_gru_1, numbers_of_units_gru_2, epochs]
 
 
 param_file = open("params.txt", "w")
